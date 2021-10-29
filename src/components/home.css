@@ -1,0 +1,14 @@
+.masthead {
+  height: 87vh;
+  min-height: 300px;
+  margin: 0 20px;
+  background-image: url("../img/photo-1590880795696-20c7dfadacde.jfif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#head {
+  background-color: #00000094;
+  color: white;
+}
