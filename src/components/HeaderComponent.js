@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Container } from "react-bootstrap";
 import mainLogo from "../img/mainLogo.png";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [collapsed, setCollapsed] = useState(true);
@@ -11,20 +12,24 @@ const Header = () => {
             <React.Fragment>
             <Container>
                 <Navbar color="faded" light>
-                    <a href="#" className="navbar-brand"><img style={{height: "4rem", marginLeft: "2rem" }} href="./HomeComponent" src={mainLogo} alt="Logo" title="Logo"></img></a>
-                    <NavbarBrand className="ml" href="./HomeComponent">HighhPriest Design</NavbarBrand> 
+                    <NavLink to="/" className="navbar-brand"><img style={{height: "4rem", marginLeft: "2rem" }} src={mainLogo} alt="Logo" title="Logo"></img></NavLink>
+                    <NavLink to='/' style={{textDecoration:'none'}}>
+                    <NavbarBrand className="ml" >HighhPriest Design</NavbarBrand> 
+                    </NavLink>
                     <NavbarToggler onClick={toggleNavbar} className="mr-2" />
                     <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink href="/components/home">HOME</NavLink>
+                            <NavLink to='/'>HOME</NavLink>
                         </NavItem>
-                    <NavLink href="./components/shop">SHOP</NavLink>
                     <NavItem>
-                        <NavLink href="./components/about">ABOUT US</NavLink>
+                        <NavLink to='/shop'>SHOP</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="./components/contact">CONTACT US</NavLink>
+                        <NavLink to='/about'>ABOUT US</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink to='/contact'>CONTACT US</NavLink>
                     </NavItem>
                     </Nav>
                 </Collapse>
