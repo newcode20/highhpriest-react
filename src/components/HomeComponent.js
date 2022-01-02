@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import images from "./images"
+import ImageCarousel from "./carousel";
 
 function Home(){
     return(
@@ -20,8 +21,12 @@ function Home(){
                     </div>
                 </div>
             </div>
-    
+            <div>
+            <div>
+              <ImageCarousel images={images} />
+            </div>
             
+           </div> 
         </div>
     )
 }
